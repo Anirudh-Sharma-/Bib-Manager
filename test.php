@@ -1,12 +1,12 @@
 <?php
-    echo "harsh";
     require_once('PHPMailer-master/class.phpmailer.php'); //library added in download source.
     $msg  = 'Hello World';
     $subj = 'test mail message';
     $to   = '19.anirudh.sharma@gmail.com';
     $from = '19.anirudh.sharma@gmail.com';
     $name = 'My Name';
- 
+    echo "harsh";
+    
     echo smtpmailer($to,$from, $name ,$subj, $msg);
  
     function smtpmailer($to, $from, $from_name = 'Example.com', $subject, $body, $is_gmail = true)
