@@ -85,6 +85,7 @@ if(isset($_POST['submit'])){
 	$message .= "<a href='verify.php?token=$token'>Click here</a>";
 	function send_mail($to, $subject, $txt){
     $to = $to;
+	echo $to;
     $subject = $subject;
     $txt = $txt;
     // Always set content-type when sending HTML email
