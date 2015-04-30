@@ -2,6 +2,7 @@
 <?php  require_once("includes/db_connect.php"); ?>
 <?php  require_once("functions.php"); ?>
 <?php  require_once("validation_functions.php"); ?>
+<?php  require_once("PHPMailer-master/class.phpmailer.php"); ?>
 <?php
 if(isset($_POST['submit'])){
 	
