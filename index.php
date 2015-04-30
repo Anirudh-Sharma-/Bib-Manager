@@ -27,16 +27,12 @@ if(isset($_POST['submit'])){
 	
 	
 	//creating values for sending verification mail 
-	$headers = "MIME-Version: 1.0" . "\r\n";
-	$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+	//$headers = "MIME-Version: 1.0" . "\r\n";
+	//$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 	// More headers
-	$headers .= 'From: <19.anirudh.sharma@gmail.com>' . "\r\n";	
-	$to = $email;
-	$subject = "Bibliography Manager: Verification Account";
-	$token = md5($email.time());
-	$message = "Click this is verification code to verify your registration: <br>";
-	$message .= "<a href='verify.php?token=$token'>Click here</a>";
+	//$headers .= 'From: <19.anirudh.sharma@gmail.com>' . "\r\n";	
+
 	
 	
 	
@@ -79,7 +75,38 @@ if(isset($_POST['submit'])){
 			//$_SESSION["message"] = "Libraries cannot be created.";
 		}   // ends: creating two default libraries: "Trash" and "Unfiled"
 		//echo $message;
-		mail($to,$subject,$message,$headers);//sending verification mail
+		//if(!mail($to,$subject,$message,$headers)){echo "failed";}//sending verification mail
+		//*********************************************
+			$to = $email;
+	$subject = "Bibliography Manager: Verification Account";
+	$token = md5($email.time());
+	$message = "Click this is verification code to verify your registration: <br>";
+	$message .= "<a href='verify.php?token=$token'>Click here</a>";
+	function send_mail($to, $subject, $txt){
+    $to = $to;
+    $subject = $subject;
+    $txt = $txt;
+    // Always set content-type when sending HTML email
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    // More headers
+    $headers .= 'From: 19.anirudh.sharma@gmail.com' . "\r\n";
+    
+     
+    if(mail($to,$subject,$txt,$headers)){
+        global $mailSuccess;
+        $mailSuccess = 1;
+        $_COOKIE['message'] = $mailSuccess;
+    }else{
+        global $mailFailure;
+        $mailFailure = 1;
+        $_COOKIE['message'] = $mailFailure;
+    }
+	
+	send_mail($to, $subject, $message);
+	
+}
+		
 	}else{
 		//$message = "registration failed";
 		//echo ($message);
