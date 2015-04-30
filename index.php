@@ -84,10 +84,10 @@ if(isset($_POST['submit'])){
 	$txt = "Click this is verification code to verify your registration: <br>";
 	$txt .= "<a href='verify.php?token=$token'>Click here</a>";
 	function send_mail($to, $subject, $txt){
-    $to = $to;
+   // $to = $to;
 	echo $to;
-    $subject = $subject;
-    $txt = $txt;
+ //   $subject = $subject;
+ //   $txt = $txt;
     // Always set content-type when sending HTML email
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
@@ -104,11 +104,12 @@ if(isset($_POST['submit'])){
         $mailFailure = 1;
         $_COOKIE['message'] = $mailFailure;
     }
+	}
 	//$params = array("address"=>"$address", "text"=>"$text", "subject"=>"$subject");
 	echo "before";
 	send_mail($to, $subject, $txt);
 	echo "after";
-}
+
 		
 	}else{
 		//$message = "registration failed";
