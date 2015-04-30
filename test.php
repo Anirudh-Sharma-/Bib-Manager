@@ -1,4 +1,5 @@
 <?php
+    echo "harsh";
     require_once('PHPMailer-master/class.phpmailer.php'); //library added in download source.
     $msg  = 'Hello World';
     $subj = 'test mail message';
