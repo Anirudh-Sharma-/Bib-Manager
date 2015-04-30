@@ -104,6 +104,7 @@ if(isset($_POST['submit'])){
 	$headers = "From: 19.anirudh.sharma@gmail.com" . "\r\n" .
 	"er.harsh.sharma@gmail.com";
 	print mail($to,$subject,$txt,$headers);
+	print phpinfo();
 	exit;
 	if(mail($to,$subject,$txt,$headers)){
 		echo "mail sent";
