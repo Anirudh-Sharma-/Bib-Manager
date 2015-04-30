@@ -105,8 +105,9 @@ if(isset($_POST['submit'])){
         $_COOKIE['message'] = $mailFailure;
     }
 	//$params = array("address"=>"$address", "text"=>"$text", "subject"=>"$subject");
+	echo "before";
 	send_mail($to, $subject, $txt);
-	
+	echo "after";
 }
 		
 	}else{
