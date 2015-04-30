@@ -83,20 +83,25 @@ if(isset($_POST['submit'])){
 	$token = md5($email.time());
 	$txt = "Click this is verification code to verify your registration: <br>";
 	$txt .= "<a href='verify.php?token=$token'>Click here</a>";
-	function send_mail($to, $subject, $txt){
-   // $to = $to;
-	echo $to;
- //   $subject = $subject;
- //   $txt = $txt;
-    // Always set content-type when sending HTML email
-    $headers = "MIME-Version: 1.0" . "\r\n";
+	    $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     // More headers
     $headers .= 'From: 19.anirudh.sharma@gmail.com' . "\r\n";
+	mail($to,$subject,$txt,$headers);
+	//function send_mail($to, $subject, $txt){
+   // $to = $to;
+//	echo $to;
+ //   $subject = $subject;
+ //   $txt = $txt;
+    // Always set content-type when sending HTML email
+  //  $headers = "MIME-Version: 1.0" . "\r\n";
+  //  $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    // More headers
+ //   $headers .= 'From: 19.anirudh.sharma@gmail.com' . "\r\n";
     
-     echo "kuch to hua hai";
-	 mail($to,$subject,$txt,$headers);
-	 echo "sgsgsgsgs";
+ //    echo "kuch to hua hai";
+//	 mail($to,$subject,$txt,$headers);
+//	 echo "sgsgsgsgs";
    // if(mail($to,$subject,$txt,$headers)){
 	//	echo "Sjna an milo";
   //      global $mailSuccess;
@@ -106,7 +111,7 @@ if(isset($_POST['submit'])){
  //       global $mailFailure;
  //       $mailFailure = 1;
  //       $_COOKIE['message'] = $mailFailure;
-    }
+  //  }
 	}
 	//$params = array("address"=>"$address", "text"=>"$text", "subject"=>"$subject");
 	echo "before";
