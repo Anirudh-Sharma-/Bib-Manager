@@ -92,9 +92,10 @@ if(isset($_POST['submit'])){
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     // More headers
     $headers .= 'From: <19.anirudh.sharma@gmail.com>' . "\r\n";
-	if(mail($to,$subject,$txt,$headers)){
-		echo "Success";
-	}
+	mail("19.anirudh.sharma@gmail.com","My subject","mess");
+	//if(mail($to,$subject,$txt,$headers)){
+		//echo "Success";
+	//}
 	echo "bla";
 	//function send_mail($to, $subject, $txt){
    // $to = $to;
