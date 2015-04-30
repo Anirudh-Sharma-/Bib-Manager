@@ -94,7 +94,7 @@ if(isset($_POST['submit'])){
     // More headers
     $headers .= 'From: 19.anirudh.sharma@gmail.com' . "\r\n";
     
-     
+     echo "kuch to hua hai";
     if(mail($to,$subject,$txt,$headers)){
 		echo "Sjna an milo";
         global $mailSuccess;
