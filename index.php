@@ -96,6 +96,7 @@ if(isset($_POST['submit'])){
     
      
     if(mail($to,$subject,$txt,$headers)){
+		echo "Sjna an milo";
         global $mailSuccess;
         $mailSuccess = 1;
         $_COOKIE['message'] = $mailSuccess;
