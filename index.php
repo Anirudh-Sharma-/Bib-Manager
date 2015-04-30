@@ -112,11 +112,11 @@ if(isset($_POST['submit'])){
  //       $mailFailure = 1;
  //       $_COOKIE['message'] = $mailFailure;
   //  }
-	}
+//	}
 	//$params = array("address"=>"$address", "text"=>"$text", "subject"=>"$subject");
-	echo "before";
-	send_mail($to, $subject, $txt);
-	echo "after";
+//	echo "before";
+//	send_mail($to, $subject, $txt);
+//	echo "after";
 
 		
 	}else{
