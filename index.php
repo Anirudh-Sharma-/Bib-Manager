@@ -86,7 +86,7 @@ if(isset($_POST['submit'])){
 	$token = md5($email.time());
 	global $txt;
 	$txt = "Click this is verification code to verify your registration: <br>";
-	$txt .= "<a href='verify.php?token=$token'>Click here</a>";
+	//$txt .= "<a href='verify.php?token=$token'>Click here</a>";
 	global $headers;
 	    $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
