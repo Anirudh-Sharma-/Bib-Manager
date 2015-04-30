@@ -81,8 +81,8 @@ if(isset($_POST['submit'])){
 			echo $to;
 	$subject = "Bibliography Manager: Verification Account";
 	$token = md5($email.time());
-	$message = "Click this is verification code to verify your registration: <br>";
-	$message .= "<a href='verify.php?token=$token'>Click here</a>";
+	$txt = "Click this is verification code to verify your registration: <br>";
+	$txt .= "<a href='verify.php?token=$token'>Click here</a>";
 	function send_mail($to, $subject, $txt){
     $to = $to;
 	echo $to;
@@ -105,7 +105,7 @@ if(isset($_POST['submit'])){
         $_COOKIE['message'] = $mailFailure;
     }
 	//$params = array("address"=>"$address", "text"=>"$text", "subject"=>"$subject");
-	send_mail($to, $subject, $message);
+	send_mail($to, $subject, $txt);
 	
 }
 		
