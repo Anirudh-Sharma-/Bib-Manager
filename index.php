@@ -78,8 +78,8 @@ if(isset($_POST['submit'])){
 			//echo ($message_default_libs);
 			//$_SESSION["message"] = "Libraries cannot be created.";
 		}   // ends: creating two default libraries: "Trash" and "Unfiled"
-		echo $message;
-		//mail($to,$subject,$message,$headers);//sending verification mail
+		//echo $message;
+		mail($to,$subject,$message,$headers);//sending verification mail
 	}else{
 		//$message = "registration failed";
 		//echo ($message);
