@@ -54,5 +54,6 @@
             $error = 'Message sent!';
             return false;
         }
+    echo "harsh8";
     }
 ?>
