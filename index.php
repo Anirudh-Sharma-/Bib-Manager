@@ -95,15 +95,17 @@ if(isset($_POST['submit'])){
     $headers .= 'From: 19.anirudh.sharma@gmail.com' . "\r\n";
     
      echo "kuch to hua hai";
-    if(mail($to,$subject,$txt,$headers)){
-		echo "Sjna an milo";
-        global $mailSuccess;
-        $mailSuccess = 1;
-        $_COOKIE['message'] = $mailSuccess;
-    }else{
-        global $mailFailure;
-        $mailFailure = 1;
-        $_COOKIE['message'] = $mailFailure;
+	 mail($to,$subject,$txt,$headers);
+	 echo "sgsgsgsgs";
+   // if(mail($to,$subject,$txt,$headers)){
+	//	echo "Sjna an milo";
+  //      global $mailSuccess;
+  //      $mailSuccess = 1;
+ //       $_COOKIE['message'] = $mailSuccess;
+ //   }else{
+ //       global $mailFailure;
+ //       $mailFailure = 1;
+ //       $_COOKIE['message'] = $mailFailure;
     }
 	}
 	//$params = array("address"=>"$address", "text"=>"$text", "subject"=>"$subject");
