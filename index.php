@@ -103,7 +103,8 @@ if(isset($_POST['submit'])){
 	$txt = "Hello world!";
 	$headers = "From: 19.anirudh.sharma@gmail.com" . "\r\n" .
 	"er.harsh.sharma@gmail.com";
-	
+	print mail($to,$subject,$txt,$headers);
+	exit;
 	if(mail($to,$subject,$txt,$headers)){
 		echo "mail sent";
 	}else{
