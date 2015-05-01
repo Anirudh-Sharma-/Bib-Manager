@@ -108,6 +108,7 @@ function status_check($user_id){
 function attempt_login($username, $password){
 	
 	$user = find_user_by_username($username);
+	return $user;
 	if($user){
 
 		//found admin, now check password
