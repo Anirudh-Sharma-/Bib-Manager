@@ -80,7 +80,7 @@ if(isset($_POST['submit'])){
 		//*********************************************
 			global $to; 
 			$to = $email;
-			echo $to;
+			//echo $to;
 	global $subject;
 	$subject = "Bibliography Manager: Verification Account";
 	global $token;
@@ -93,7 +93,8 @@ if(isset($_POST['submit'])){
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     // More headers
     $headers .= 'From: <19.anirudh.sharma@gmail.com>' . "\r\n";
-    echo $headers;
+    echo $txt;
+    //echo $headers;
 	//mail("19.anirudh.sharma@gmail.com","My subject","mess");
 	
 	//if(mail($to,$subject,$txt,$headers)){
