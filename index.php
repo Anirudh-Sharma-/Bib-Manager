@@ -89,29 +89,17 @@ if(isset($_POST['submit'])){
 	$txt = "Click this is verification code to verify your registration: <br>";
 	$txt .= "<a href='verify.php?token=$token'>Click here</a>";
 	global $headers;
-	    //$headers = "MIME-Version: 1.0" . "\r\n";
-    //$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+	    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     // More headers
-    //$headers .= 'From: <19.anirudh.sharma@gmail.com>' . "\r\n";
+    $headers .= 'From: <19.anirudh.sharma@gmail.com>' . "\r\n";
+    echo $headers;
 	//mail("19.anirudh.sharma@gmail.com","My subject","mess");
 	
 	//if(mail($to,$subject,$txt,$headers)){
 		//echo "Success";
 	//}
-	echo "bla";
-	$to = "er.harsh.sharma@gmail.com";
-	$subject = "My subject";
-	$txt = "Hello world!";
-	$headers = "From: 19.anirudh.sharma@gmail.com" . "\r\n" .
-	"er.harsh.sharma@gmail.com";
-	print mail($to,$subject,$txt,$headers);
-	print phpinfo();
-	exit;
-	if(mail($to,$subject,$txt,$headers)){
-		echo "mail sent";
-	}else{
-		echo "mail not sent";
-	}
+
 	//function send_mail($to, $subject, $txt){
    // $to = $to;
 //	echo $to;
