@@ -6,7 +6,7 @@
 <?php
 $registration_failed = false;
 $user_token = $_GET["token"];
-
+echo ($_GET["token"]);
 $query = "SELECT * ";
 $query .= "FROM user_register ";
 $query .= "WHERE token = '{$user_token}' ";
