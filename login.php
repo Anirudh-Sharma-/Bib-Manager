@@ -18,7 +18,11 @@ if(isset($_POST['submit'])){
 		$_SESSION["user_email"] = $found_user["user_email"];
 		redirect_to("home.php");
 	}else{
-		$_SESSION["message"] = "Username/Password not found";
+	//	$_SESSION["message"] = "Username/Password not found";
+			$_SESSION["user_id"] = $found_user["user_id"];
+		$_SESSION["user_name"] = $found_user["user_name"];
+		$_SESSION["user_email"] = $found_user["user_email"];
+		redirect_to("home.php");
 	}
 	
 	
